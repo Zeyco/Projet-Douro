@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Paletes</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.5/build/spline-viewer.js"></script>
+</head>
+<body>
+    <spline-viewer url="https://prod.spline.design/X7rgo2mBNzr2E-pj/scene.splinecode" class="background"></spline-viewer>
+    <div class="centerBox">
+        <div class="button-container">
+            <button id="startButton">Iniciar Calculadora</button>
+        </div>
+    </div>
+    <div class="modal" id="calculatorModal">
+        <div class="modal-content">
+            <span class="close-button" id="closeButton">&times;</span>
+            <h1>Calculadora de Paletes</h1>
+            <form id="palettesForm">
+                <label for="surface">Informe a área da obra (em m²):</label>
+                <input type="number" id="surface" name="surface" required placeholder="Digite a área em m²">
+                
+                <label for="nbrDePers">Quantas pessoas irão trabalhar hoje com você:</label>
+                <input type="number" id="nbrDePers" name="nbrDePers" required placeholder="Digite o número de pessoas">
+                
+                <button type="submit">Calcular</button>
+            </form>
+            <div id="results" class="results"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
